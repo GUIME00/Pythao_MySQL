@@ -47,4 +47,3 @@ except Exception as e:
     print(f"Erro ao deletar aluno: {e}")
 finally:
     conexao.close() """
-
