@@ -15,22 +15,22 @@ LIMIT 10 """
 
 df = pd.read_sql(query, con=engine)
 
-# # MATPLOTLIB
-# plt.figure(figsize=(12, 6))
-# plt.bar(df['nome_produto'], df['total_vendido'], color='darkblue') # bar = vertical e barh = horizontal
-# plt.xlabel('Total Vendido')
-# plt.ylabel('Produtos')
-# plt.title('Top 10 Produtos Mais Vendidos')
-# plt.xticks(rotation=45, ha='right')
-# plt.show()
+# MATPLOTLIB
+plt.figure(figsize=(12, 6))
+plt.bar(df['nome_produto'], df['total_vendido'], color='darkblue') # bar = vertical e barh = horizontal
+plt.xlabel('Total Vendido')
+plt.ylabel('Produtos')
+plt.title('Top 10 Produtos Mais Vendidos')
+plt.xticks(rotation=45, ha='right')
+plt.show()
 
-# # GRÁFICO DE PIZZA
-# plt.figure(figsize=(8, 8))
-# plt.pie(df['total_vendido'], labels=df['nome_produto'], autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
-# # plt.pie(df['total_vendido'], labels=df['nome_produto'], autopct='%1.1f%%')
-# plt.title('TOP 10 dos Produtos Mais Vendidos')
-# # plt.axis('equal')
-# plt.show()
+# GRÁFICO DE PIZZA
+plt.figure(figsize=(8, 8))
+plt.pie(df['total_vendido'], labels=df['nome_produto'], autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
+# plt.pie(df['total_vendido'], labels=df['nome_produto'], autopct='%1.1f%%')
+plt.title('TOP 10 dos Produtos Mais Vendidos')
+# plt.axis('equal')
+plt.show()
 
 query2 = """
 SELECT
